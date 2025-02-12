@@ -1,0 +1,32 @@
+.logincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+input {
+    margin: 8px 0;
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+}
+
+p{
+     color: red;
+     font-size: 2em;
+}
+
+button{
+    width: 320px;
+}
+
+.imglogo{
+    background-image: url('../assets/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+}

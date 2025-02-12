@@ -1,0 +1,34 @@
+.nopage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    color: #fff;
+}
+
+.animation-container {
+    text-align: center;
+}
+
+.animated-404 {
+    font-size: 100px;
+    font-weight: bold;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.nopage-message {
+    font-size: 24px;
+    animation: blink 1.5s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}

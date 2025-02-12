@@ -1,0 +1,43 @@
+.AdminPoster {
+    position: relative;
+    height: 10em;
+    width: 61.1em;
+    margin-left: 4em;
+    background-color: rgb(235, 94, 40);
+    text-align: center;
+    align-content: center;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.AdminPoster h1 {
+    font-size: 3.6em;
+    color: rgb(255, 252, 242);
+
+}
+
+.bodySection {
+    position: relative;
+    display: flex;
+    background-color: rgb(64, 61, 57);
+    top: 2em;
+    height: 62%;
+    margin-left: 4em;
+    width: 93.1%;
+    gap: 200px;
+    
+}
+
+.bodySection div {
+    color: white;
+    font-size: xx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 2em;
+    margin-top: 2em;
+}
+
+.que h2,
+.ans h2 {
+    text-align: left;
+    line-height: 1.5em;
+}

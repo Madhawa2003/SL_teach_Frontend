@@ -1,0 +1,67 @@
+.maincontainer{
+    /* background-color: rgb(239, 239, 239); */
+    width: calc(100vw - 26vw);
+   
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: .5em;
+}
+
+.pdfform{
+    align-items: center;
+    justify-content: center;
+
+}
+
+.links{
+    font-size: 2em;
+    color: red;
+    position: relative;
+}
+
+.centerdiv{
+    background-color: antiquewhite;
+    padding: 2em;
+    width: 50%;
+    text-align: left;
+    font-size: 1.2em;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30%;
+    
+}
+.scrollcontainer{
+    height: calc(100vh - 6vw);
+    overflow: scroll;
+}
+
+.outs {
+    background-color: rgba(255, 255, 255, 0.498);
+    display: flex;
+    flex-wrap: wrap; /* Allows child items to wrap on smaller screens */
+
+    align-items: center; /* Centers child elements vertically */
+    height: auto; /* Ensures that the container takes up the full viewport height */
+    padding: 80px; /* Optional: to add some padding around the container */
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+.outs > div {
+    display: flex;
+    flex-direction: column; /* Makes the content inside each PDF item stack vertically */
+    align-items: center; /* Centers the content inside each PDF item horizontally */
+    justify-content: center; /* Centers the content inside each PDF item vertically */
+    margin: 10px; /* Optional: space between each PDF item */
+}
+
+.outs img {
+    height: 5em;
+    width: auto;
+}
+
