@@ -35,7 +35,6 @@ const Navbar = () => {
             <div className='navupper'>
                 <h2>SL TEACH</h2>
                 <div className='Logo' onClick={() => setIsNavVisible(!isNavVisible)}>
-                    <img src="/path/to/logo.png" alt="Logo" />
                 </div>
                 <div className="clock">{time}</div> {/* Italy time clock */}
             </div>
