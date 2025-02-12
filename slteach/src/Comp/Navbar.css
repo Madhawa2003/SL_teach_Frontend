@@ -94,6 +94,7 @@
 
 .Logo {
     background-image: url(../assets/logo.png);
+    margin-top: 21px;
     height: 6em;
     width: 6em;
     background-size: cover;
