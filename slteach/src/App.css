@@ -1,13 +1,27 @@
+@media (max-width: 768px){
+  .maincontainer {
+      width: 100vw ;
+      left: 0 !important ; /* Ensure it moves to full screen */  
+      /* height: 100vh !important; */
+  }
+  .bodySection{
+    width: 44.6em !important;
+  }
+  .AdminPoster {
+      width: 44.6em !important;
+      margin-left: 0;
+  }
+  .navcontainer {
+    transform: translateX(-110%); /* Hide navbar by moving it left */
+}
 
+.navcontainer.show {
+    transform: translateX(0); /* Show navbar when toggled */
+}
+}
 *{
   margin: 0%;
   padding: 0%;
 
 }
-.maincontainer{
-  background-color: rgb(255, 252, 242);
-  height: calc(100vh - 6em);
-  width: calc(100vw - 23vw);
-  left: 23vw;
-  position: relative;
-}
+

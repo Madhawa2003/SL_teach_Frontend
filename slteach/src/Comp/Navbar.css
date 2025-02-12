@@ -1,20 +1,11 @@
-/* Hide navbar by default for small screens */
-@media (max-width: 768px) {
-    .navcontainer {
-        display: none;
-    }
-    
-    .navcontainer.show {
-        display: flex;
-    }
-}
-
-.navcontainer{
+/* Default navbar styles */
+.navcontainer {
     width: 23vw;
     height: calc(100vh - 5.5em);
-    background-color: rgb(204,197,185);
+    background-color: rgb(204, 197, 185);
     position: absolute;
-    
+    left: 0;
+    transition: transform 0.3s ease-in-out;
 }
 
 .navselections{
@@ -105,7 +96,7 @@
     background-color: white;
     border-radius: 50%;
     border: 8px solid rgb(255, 252, 242);
-    cursor: pointer;/* clickable logo */
+    cursor: pointer; 
 }
 
 .clock {

@@ -1,3 +1,12 @@
+.maincontainer {
+    background-color: rgb(255, 252, 242);
+    height: calc(100vh - 6em);
+    width: calc(100vw - 23vw);
+    left: 23vw;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
 .AdminPoster {
     position: relative;
     height: 10em;
@@ -41,3 +50,5 @@
     text-align: left;
     line-height: 1.5em;
 }
+
+

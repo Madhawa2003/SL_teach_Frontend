@@ -12,7 +12,8 @@ const Navbar = () => {
         }).format(new Date())
     );
 
-    const [isNavVisible, setIsNavVisible] = useState(false);
+    const [isNavVisible, setIsNavVisible] = useState(window.innerWidth >= 768); // Show navbar by default on large screens
+
     const location = useLocation();
 
     useEffect(() => {
@@ -30,16 +31,19 @@ const Navbar = () => {
         return () => clearInterval(interval);
     }, []);
 
+    // Handle navbar visibility toggle on small screens
+    const toggleNavbar = () => {
+        setIsNavVisible(!isNavVisible);
+    };
+
     return (
         <>
             <div className='navupper'>
                 <h2>SL TEACH</h2>
-                <div className='Logo' onClick={() => setIsNavVisible(!isNavVisible)}>
-                </div>
+                <div className='Logo' onClick={toggleNavbar}></div> {/* Click logo to show/hide navbar */}
                 <div className="clock">{time}</div> {/* Italy time clock */}
             </div>
 
-            {/* Navbar will be hidden if screen width < 768px unless toggled */}
             <div className={`navcontainer ${isNavVisible ? "show" : ""}`}>
                 <div className='navselections'>
                     <Link className={`navs ${location.pathname === "/" ? "active" : ""}`} to="/">Home</Link>
