@@ -16,7 +16,7 @@ const Pdf_management = () => {
         const fetchPdfs = async () => {
             setLoading(true);
             try {
-                const response = await axios.get("https://your-api-url.com/pdfs");
+                const response = await axios.get("https://slteach-4914784447fb.herokuapp.com/pdfs");
                 setPdfs(response.data);
             } catch (err) {
                 setError("Error fetching PDFs");
@@ -61,7 +61,7 @@ const Pdf_management = () => {
         formData.append("title", title);
 
         try {
-            const res = await axios.post("https://your-api-url.com/upload", formData);
+            const res = await axios.post("https://slteach-4914784447fb.herokuapp.com/upload", formData);
             setPdfs((prevPdfs) => [...prevPdfs, res.data]); // Avoid direct mutation of state
             setTitle("");
             setSelectedFile(null);
@@ -75,7 +75,7 @@ const Pdf_management = () => {
 
     const toggleVisibility = async (id, visible) => {
         try {
-            const res = await axios.put(`https://your-api-url.com/pdfs/${id}/visibility`, { visible: !visible });
+            const res = await axios.put(`https://slteach-4914784447fb.herokuapp.com/${id}/visibility`, { visible: !visible });
             setPdfs((prevPdfs) => prevPdfs.map((pdf) => (pdf._id === id ? res.data : pdf)));
         } catch (error) {
             setError("Error toggling visibility");
@@ -88,7 +88,7 @@ const Pdf_management = () => {
         if (!confirmDelete) return;
 
         try {
-            const response = await axios.delete(`https://your-api-url.com/pdfs/${pdfId}`);
+            const response = await axios.delete(`https://slteach-4914784447fb.herokuapp.com/${pdfId}`);
             if (response.status === 200) {
                 alert(response.data.message); // Success message from the backend
                 setPdfs((prevPdfs) => prevPdfs.filter((pdf) => pdf._id !== pdfId)); // Remove deleted PDF from the state
@@ -107,7 +107,7 @@ const Pdf_management = () => {
             <div className="maincontainer">
                 <div className="scrollcontainer">
                     <h1>PDF Management</h1>
-                    <a className="links" href="http://localhost:5173/UserView">Pdf Link</a>
+                    <a className="links" href="https://slteach-4914784447fb.herokuapp.com/UserView">Pdf Link</a>
 
                     {/* Upload Form */}
                     <div className="pdfform">
@@ -143,8 +143,8 @@ const Pdf_management = () => {
                             {pdfs.map((pdf) => (
                                 <div key={pdf._id}>
                                     <h3>{pdf.title}</h3>
-                                    <img src={`https://your-api-url.com${pdf.thumbnailUrl}`} alt={pdf.title} />
-                                    <a href={`https://your-api-url.com${pdf.fileUrl}`} target="_blank" rel="noopener noreferrer">View PDF</a>
+                                    <img src={`https://slteach-4914784447fb.herokuapp.com${pdf.thumbnailUrl}`} alt={pdf.title} />
+                                    <a href={`https://slteach-4914784447fb.herokuapp.com${pdf.fileUrl}`} target="_blank" rel="noopener noreferrer">View PDF</a>
                                     <button onClick={() => toggleVisibility(pdf._id, pdf.visible)}>
                                         {pdf.visible ? "Hide from Users" : "Show to Users"}
                                     </button>

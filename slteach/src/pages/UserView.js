@@ -6,7 +6,7 @@ const UserView = () => {
   const [pdfs, setPdfs] = useState([]);
 
   useEffect(() => {
-    axios.get("https://silver-train-5gr9xj6xv5qpcvpg7-9001.app.github.dev/pdfs").then((res) => {
+    axios.get("https://slteach-4914784447fb.herokuapp.com/pdfs").then((res) => {
       setPdfs(res.data.filter((pdf) => pdf.visible)); // Show only visible PDFs
     });
   }, []);
@@ -24,14 +24,14 @@ const UserView = () => {
 
             {/* Display Thumbnail */}
             <img
-              src={`https://silver-train-5gr9xj6xv5qpcvpg7-9001.app.github.dev${pdf.thumbnailUrl}`}
+              src={`https://slteach-4914784447fb.herokuapp.com/${pdf.thumbnailUrl}`}
               alt={pdf.title}
               className="mb-4"
             />
             <br/>
 
             <a
-              href={`https://silver-train-5gr9xj6xv5qpcvpg7-9001.app.github.dev${pdf.fileUrl}`}
+              href={`https://slteach-4914784447fb.herokuapp.com/${pdf.fileUrl}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 underline hover:text-blue-700 transition"
