@@ -12,6 +12,7 @@ const Navbar = () => {
         }).format(new Date())
     );
 
+    const [isNavVisible, setIsNavVisible] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
@@ -33,10 +34,14 @@ const Navbar = () => {
         <>
             <div className='navupper'>
                 <h2>SL TEACH</h2>
-                <div className='Logo'></div>
+                <div className='Logo' onClick={() => setIsNavVisible(!isNavVisible)}>
+                    <img src="/path/to/logo.png" alt="Logo" />
+                </div>
                 <div className="clock">{time}</div> {/* Italy time clock */}
             </div>
-            <div className='navcontainer'>
+
+            {/* Navbar will be hidden if screen width < 768px unless toggled */}
+            <div className={`navcontainer ${isNavVisible ? "show" : ""}`}>
                 <div className='navselections'>
                     <Link className={`navs ${location.pathname === "/" ? "active" : ""}`} to="/">Home</Link>
                 </div>
